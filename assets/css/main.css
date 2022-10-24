@@ -756,16 +756,16 @@ section {
 /*--------------------------------------------------------------
 # Clients Section
 --------------------------------------------------------------*/
-.clients {
-  padding: 40px 0;
-}
-
-.clients .swiper {
+/* .clients {
   padding: 10px 0;
 }
 
+.clients .swiper {
+  padding: 20px 0;
+}
+
 .clients .swiper-slide img {
-  width: 150px;
+  width: 200px;
   height: 120px;
   transition: 0.3s;
 }
@@ -780,8 +780,8 @@ section {
 }
 
 .clients .swiper-pagination .swiper-pagination-bullet {
-  width: 12px;
-  height: 12px;
+  width: 20px;
+  height: 20px;
   background-color: #fff;
   opacity: 1;
   background-color: #ddd;
@@ -789,7 +789,7 @@ section {
 
 .clients .swiper-pagination .swiper-pagination-bullet-active {
   background-color: var(--color-primary);
-}
+} */
 /*--------------------------------------------------------------
 # Call To Action Section
 --------------------------------------------------------------*/

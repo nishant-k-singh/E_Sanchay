@@ -24,10 +24,11 @@
                 session_start();
                 $_SESSION["UserID"] = $row["UserID"];
 		        $_SESSION["UName"] = $row["UserName"];
+                $_SESSION["UEmail"] = $row["Email"];
 		        $_SESSION["logged"] = "TRUE";
         		$_SESSION["flashedMessage"] = 'false';
 
-                header("Location: ../Home/home.php");
+                header("Location: ../index.php");
                 // header("refresh:5;url=../Home/home.php");
 
 
@@ -56,8 +57,8 @@
             $sql = "INSERT INTO users(UserName, UserPassword, PhoneNumber, Email) values('$uname', '$upwd', '$ucontact', '$uemail')";
 
             if (mysqli_query($conn, $sql)) {
-                echo"<center><h1 style='background-color:green; color:white; font-family:sans-serif; width: 600px;'>Regstered!</h1></center>";
-                header("refresh:5;url= login.php");
+                echo"<center><h1 style='background-color:green; color:white; font-family:sans-serif; width: 600px;'>Registered!</h1></center>";
+                header("refresh:5;url= ../login.php");
         		
 
             }

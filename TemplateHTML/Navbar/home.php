@@ -28,38 +28,42 @@
   <header id="header" class="header d-flex align-items-center">
 
     <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
-      <a href="index.html" class="logo d-flex align-items-center">
+      <a href="index.php" class="logo d-flex align-items-center">
         <!-- Uncomment the line below if you also wish to use an image logo -->
         <!-- <img src="assets/img/logo.png" alt=""> -->
         <h1>E-SANCHAY<span>.</span></h1>
       </a>
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a href="./index.html">HOME</a></li>
-          <li><a href="./index.html#about">ABOUT</a></li>
-          <li><a href="./index.html#contact">CONTACT</a></li>
+          <li><a href="./index.php">HOME</a></li>
+          <li><a href="./index.php#about">ABOUT</a></li>
+          <li><a href="./index.php#contact">CONTACT</a></li>
           <!-- <li><a href="#services">Services</a></li> -->
-          <li><a href="./index.html#portfolio">SERVICES</a></li>
-          <!-- <li><a href="#team">Team</a></li> -->
-          <li><a href="">LOGIN/SIGN UP</a></li>
-          <!-- <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
-            <ul>
-              <li><a href="#">Drop Down 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
-                <ul>
-                  <li><a href="#">Deep Drop Down 1</a></li>
-                  <li><a href="#">Deep Drop Down 2</a></li>
-                  <li><a href="#">Deep Drop Down 3</a></li>
-                  <li><a href="#">Deep Drop Down 4</a></li>
-                  <li><a href="#">Deep Drop Down 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Drop Down 2</a></li>
-              <li><a href="#">Drop Down 3</a></li>
-              <li><a href="#">Drop Down 4</a></li>
-            </ul>
-          </li> -->
-         
+          <li><a href="./index.php#portfolio">SERVICES</a></li>
+          <!-- <li><a href="#team">Team</a></li> -->          
+          <?php
+          // session_start();
+          
+            
+            if(empty($_SESSION['logged'])){ ?>
+               <li><a href="login.php">LOGIN/SIGN UP</a></li>
+              <?php
+              
+            } else {
+                if(isset($_SESSION['logged'])){  ?>
+                    <li><a href="TemplateHTMl/logout.php">LOGOUT</a></li>
+                    <li><a href="UserDashboard/user.php">YOUR DASHBOARD</a></li>
+                    <!-- <li style="color:white; text-transform:uppercase;"><?php echo 'Hello '.$_SESSION['UName'];?></li> -->
+              
+                <?php
+                }else{
+                    echo "isset condition not working";
+                    // header("Location: ../Home/home.php");
+  
+              }
+          } 
+  
+        ?>       
         </ul>
       </nav><!-- .navbar -->
 

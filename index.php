@@ -17,7 +17,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
@@ -58,7 +58,7 @@
   <header id="header" class="header d-flex align-items-center">
 
     <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
-      <a href="index.html" class="logo d-flex align-items-center">
+      <a href="index.php" class="logo d-flex align-items-center">
         <!-- Uncomment the line below if you also wish to use an image logo -->
         <img src="assets/img/ES 1.png" alt="">
         <h1>E-SANCHAY<span>.</span></h1>
@@ -71,37 +71,58 @@
           <!-- <li><a href="#services">Services</a></li> -->
           <li><a href="#portfolio">SERVICES</a></li>
           <!-- <li><a href="#team">Team</a></li> -->
-          <li><a href="login.php">LOGIN/SIGN UP</a></li>
-          <!-- <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
-            <ul>
-              <li><a href="#">Drop Down 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
-                <ul>
-                  <li><a href="#">Deep Drop Down 1</a></li>
-                  <li><a href="#">Deep Drop Down 2</a></li>
-                  <li><a href="#">Deep Drop Down 3</a></li>
-                  <li><a href="#">Deep Drop Down 4</a></li>
-                  <li><a href="#">Deep Drop Down 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Drop Down 2</a></li>
-              <li><a href="#">Drop Down 3</a></li>
-              <li><a href="#">Drop Down 4</a></li>
-            </ul>
-          </li> -->
-         
+          <!-- <li><a href="login.php">LOGIN/SIGN UP</a></li> -->
+
+          <?php
+          session_start();
+          
+            
+            if(empty($_SESSION['logged'])){ ?>
+               <li><a href="login.php">LOGIN/SIGN UP</a></li>
+              <?php
+              
+            } else {
+                if(isset($_SESSION['logged'])){  ?>
+                    <li><a href="TemplateHTMl/logout.php">LOGOUT</a></li>
+                    <li><a href="UserDashboard/user.php">YOUR DASHBOARD</a></li>
+                    <!-- <li style="color:white; text-transform:uppercase;"><?php echo 'Hello '.$_SESSION['UName'];?></li> -->
+              
+                <?php
+                }else{
+                    echo "isset condition not working";
+                    // header("Location: ../Home/home.php");
+  
+              }
+          } 
+  
+        ?>       
         </ul>
       </nav><!-- .navbar -->
-
+      
       <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
       <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
 
     </div>
   </header><!-- End Header -->
   <!-- End Header -->
+  <?php
+        if(isset($_SESSION['logged'])){  
+			if($_SESSION['flashedMessage'] == 'false') {  ?>
+            <div class="alert alert-success alert-dismissible fade show" role="alert" >  
+              <center>
+				  <strong>Welcome back <?php echo $_SESSION['UName'];?></strong>
+			  </center>
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+
+    	<?php } 
+		
+		}
+		$_SESSION['flashedMessage'] = 'true';
+		?>
 
   <!-- ======= Hero Section ======= -->
-  <section id="hero" class="hero">
+  <section id="hero" class="hero" style=" position: relative; top: -20px;">
     <div class="container position-relative">
       <div class="row gy-5" data-aos="fade-in">
         <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center text-center text-lg-start">
@@ -224,7 +245,7 @@
 
         <div class="clients-slider swiper">
           <div class="swiper-wrapper align-items-center">
-            <div class="swiper-slide"><img src="assets/img/comm.png" class="img-fluid" alt="" height="200" width="500"></div>
+            <div class="swiper-slide"><img src="assets/img/comm.png" class="img-fluid" alt=""></div>
             <div class="swiper-slide"><img src="assets/img/greenspace.jpg" class="img-fluid" alt=""  height="200" width="300"></div>
             <div class="swiper-slide"><img src="assets/img/tripple.png" class="img-fluid" alt=""  height="200" width="300"></div>
             <div class="swiper-slide"><img src="assets/img/lg.png" class="img-fluid" alt=""  height=200 width=300></div>
@@ -341,7 +362,7 @@
 
             <div class="col-xl-4 col-md-6 portfolio-item filter-books">
               <div class="portfolio-wrap">
-                <a href="SellItem.php?itemName=xbox"><img src="assets/img/harddisk.jpeg" class="img-fluid" alt=""></a>
+                <a href="SellItem.php?itemName=hardisk"><img src="assets/img/harddisk.jpeg" class="img-fluid" alt=""></a>
                 <div class="portfolio-info">
                   <h4><p style="color:black">Hard Disk</p></h4>
                 </div>
@@ -660,23 +681,23 @@
           </div>
 
           <div class="col-lg-8">
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+            <form action="forms/msg.php" method="post" role="form" class="php-email-form">
               <div class="row">
                 <div class="col-md-6 form-group">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                  <input type="text" name="uName" class="form-control" id="name" placeholder="Your Name" required>
                 </div>
                 <div class="col-md-6 form-group mt-3 mt-md-0">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                  <input type="email" class="form-control" name="uEmail" id="email" placeholder="Your Email" required>
                 </div>
               </div>
               <div class="form-group mt-3">
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+                <input type="number" class="form-control"  name="uPhone" id="subject" placeholder="Your Phone" required>
               </div>
               <div class="form-group mt-3">
-                <textarea class="form-control" name="message" rows="7" placeholder="Message" required></textarea>
+                <textarea class="form-control" name="uMessage" rows="7" placeholder="Message" required></textarea>
               </div>
               <div class="my-3">
-                <div class="loading">Loading</div>
+                <div class="loading">Loading</div> 
                 <div class="error-message"></div>
                 <div class="sent-message">Your message has been sent. Thank you!</div>
               </div>
@@ -767,10 +788,12 @@
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
-
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
 
 </body>
-
+<!-- commented -->
 </html>

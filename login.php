@@ -14,18 +14,18 @@
             <hr>
             <div class="login" data-login="true">
 
-                <form action="trial.php" method="POST">
+                <form action="LoginRegister/trial.php" method="POST">
 
 
                     <!-- Email input -->
                     <div class="form-outline mb-4" data-formoutline="true"> 
-                        <input type="email" name="uEmail" id="form2Example1" class="form-control" required"/>
+                        <input type="email" name="uEmail" id="form2Example1" class="form-control" required>
                         <label class="form-label" for="form2Example1">Email address</label>
                     </div>
 
                     <!-- Password input -->
                     <div class="form-outline mb-4" data-formoutline="true">
-                        <input type="password" name="uPass" id="form2Example2" class="form-control"required"/>
+                        <input type="password" name="uPass" id="form2Example2" class="form-control"required>
                         <label  class="form-label" for="form2Example2">Password</label>
                     </div>
 
@@ -53,7 +53,7 @@
                     
                     <!-- Register buttons -->
                     <div class="text-center">
-                        <p>Not a member? <a href="./register.php">Register</a></p>
+                        <p>Not a member? <a href="LoginRegister/register.php">Register</a></p>
                         <!-- <p>or sign up with:</p> -->
                         <!-- <button type="button" class="btn btn-link btn-floating mx-1">
                             <a href="https://github.com/R0-H-1T"><div class="fab fa-facebook-f"></div></a>

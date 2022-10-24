@@ -3,7 +3,7 @@
 $name = "localhost";
 $username = "root";
 $password = "";
-$dbname = "e_regain";
+$dbname = "e_sanchayy";
 $conn = mysqli_connect($name, $username, $password, $dbname);
 if ($conn) {
     
