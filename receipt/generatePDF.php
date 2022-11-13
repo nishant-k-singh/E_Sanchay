@@ -12,12 +12,12 @@
     else{
         echo"Not connected to the Database.";
     }
-    $date = date('d-m-y');
+  
         $productID = 1;
-            $sql = "SELECT UserID, UserName, Email, UserAddress, PhoneNumber, productID ,productCategory, productDate, productAns, productType, adminResponse, productImgPath, userResponse,productCategory, productPrice FROM users, products where productID = $productID ";  
+            $sql = "SELECT  UserID, UserName, Email, UserAddress, PhoneNumber, productID ,productCategory, productDate, productAns, productType, adminResponse, productImgPath, userResponse,productCategory, productPrice from users join products on UserID = user_ID where productID = $productID";  
             // $sql = "SELECT userName from users join products on user_id = userID where productID = $productID";
             $result = mysqli_query($conn, $sql);
-
+            $date = date('d-m-y');
             if (mysqli_num_rows($result) == 1) {
                 $row = mysqli_fetch_assoc($result);
                 //echo $row["userName"];
@@ -100,7 +100,7 @@ $pdf->Cell(50 ,5,"Product info" ,1,0);
 $pdf->Cell(100 ,5,$row["productAns"],1,0,'L');
 $pdf->Cell(34 ,5,$row["productPrice"],1,1,'R');//end of line
 
-$pdf->Cell(50 ,5,'Status of product',1,0);
+$pdf->Cell(50 ,5,'Status of product ',1,0);
 $pdf->Cell(100 ,5,$row["adminResponse"],1,0);
 $pdf->Cell(34 ,5,'-',1,1,'R');//end of line
 
@@ -109,7 +109,7 @@ $pdf->Cell(100 ,5,$row["productType"],1,0);
 $pdf->Cell(34 ,5,'-',1,1,'R');//end of line
 
 $pdf->Cell(50 ,5,'Product Pickup',1,0);
-$pdf->Cell(100 ,5,"Yet to be done",1,0);
+$pdf->Cell(100 ,5,'34r3',1,0);
 $pdf->Cell(34 ,5,'-',1,1,'R');//end of line
 
 //summary

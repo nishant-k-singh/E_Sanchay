@@ -1,10 +1,10 @@
 <?php
 
-
-    include '../TemplateHTML/boilerplate.html';
-    
-    include '../DBconn/dbconn.php';
     include '../QuesTemplate/functions.php';
+    include '../TemplateHTML/boilerplate.html';
+   css();
+    include '../DBconn/dbconn.php';
+    
 
     adminTemplate();
 ?>

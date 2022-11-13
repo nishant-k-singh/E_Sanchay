@@ -1,5 +1,8 @@
 
-<?php  include 'TemplateHTML/boilerplate.html';
+<?php  
+include 'QuesTemplate/functions.php';
+include 'TemplateHTML/boilerplate.html';
+css();
       
 
       include 'TemplateHTML/Navbar/home.php';

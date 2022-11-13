@@ -830,7 +830,7 @@ case "headphone": ?>
 
                                 <div>
                                   <center>
-                                    <button type="submit" class="btn btn-primary">Next</button>
+                                    <button type="submit" class="btn btn-primary">Next </button>
                                   </center>
                                 </div>
                             </form>

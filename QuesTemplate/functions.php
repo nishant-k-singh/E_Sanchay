@@ -122,7 +122,7 @@ function cdnPoppinsAndJS(){
 
 function css(){
   echo '  
-<link href="../assets/css/main.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.4.0/mdb.min.css" rel="stylesheet" />
 ';
 }
 

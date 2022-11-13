@@ -1,8 +1,8 @@
 <?php
 
-
+    include '../QuesTemplate/functions.php';
     include '../TemplateHTML/boilerplate.html';
-    
+    css();
     
 
 

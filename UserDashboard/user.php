@@ -68,6 +68,7 @@
           <!-- <li><a href="login.php">LOGIN/SIGN UP</a></li> -->
 
           <?php
+          $randomnum =rand(1,6);
           session_start();
           
             
@@ -196,14 +197,18 @@
                                         <p class="card-text"><b>Exchange it for: Rs <?php echo $row["productPrice"]; ?></b></p>
                                         <form action="userResponse.php" method="POST">
                                           <input type="hidden" name="prodID" value="<?php echo $row["productID"]; ?>">
+                                          <!-- date random number generate -->
+                                          <input type="hidden" name="date" value="<?php echo $randomnum; ?>">
                                           <button class="btn btn-success" name="userRes" value="1">Go ahead</button>
                                           <button class="btn btn-danger" name="userRes" value="0">Reject</button>
                                         </form>
                                     
                                   <?php }if ($row["userResponse"] == '1'){ ?>
-                                        <p class="card-text" style="background-color:#f0f0f0; border-radius: 10px;">Your request has been placed successfully. Our executive will come to collect the product in <b><?php echo rand(1,6); ?> days</b> time.</p>
+                                        <p class="card-text" style="background-color:#f0f0f0; border-radius: 10px;">Your request has been placed successfully. Our executive will come to collect the product in <b><?php echo $randomnum; ?> days</b> time.</p>
                                         <p class="card-text" style="background-color: green; border-radius: 10px; color:#f2f2f2"><b>Thank You for making earth a more greener place <h2>&#128515;</h2></b></p>
                                         <form action="generatePDF.php" method="POST">
+                                           <!-- date random number generate -->
+                                           <input type="hidden" name="date" value="<?php echo $randomnum; ?>">
                                           <input type="hidden" name="prodID" value="<?php echo $row["productID"]; ?>">
                                           <button class=" btn btn-primary" name="receipt" value="receipt">Download Reciept</button>
                                         </form>
@@ -217,6 +222,8 @@
                         <p class="card-text" style="background-color:#f0f0f0; border-radius: 10px;">Your request has been placed successfully. Our executive will come to collect the product in <b><?php echo rand(1,6); ?> days</b> time.</p>
                         <p class="card-text" style="background-color: green; border-radius: 10px; color:#f2f2f2"><b>Thank You for making earth a more greener place <h2>&#128515;</h2></b></p>
                         <form action="generatePDF.php" method="POST">
+                           <!-- date random number generate -->
+                           <input type="hidden" name="date" value="<?php echo $randomnum; ?>">
                             <input type="hidden" name="prodID" value="<?php echo $row["productID"]; ?>">
                             <button class=" btn btn-primary" name="receipt" value="receipt">Download Reciept</button>
                         </form>
@@ -351,7 +358,7 @@
 <script src="../assets/vendor/php-email-form/validate.js"></script>
 <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> 
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.4.0/mdb.min.js"></script>
+<!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.4.0/mdb.min.js"></script> -->
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
 
