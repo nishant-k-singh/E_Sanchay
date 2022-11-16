@@ -8,9 +8,8 @@ css();
       include 'TemplateHTML/Navbar/home.php';
 
       ?>
-    
-
-     
+   <img src="truck.jpg" alt="" style="width: 100%;
+  height: 1350px; ">
         <div class="loginForm" data-loginForm="true" style="">
         <section class="log" data-log="true">
             <h1 class="loginHeader" data-loginHeader="true">Login</h1>
@@ -44,7 +43,7 @@ css();
 
                         <div class="col">
                             <!-- Simple link -->
-                            <a href="#!">Forgot password?</a>
+                            <a href="ResetPass/Email.php">Forgot password?</a>
                         </div>
                     </div>
 
@@ -81,6 +80,7 @@ css();
         </section>
 
         </div>
+
    
        <?php include 'TemplateHTML/Footer/footer.html'; ?>
   

@@ -6,10 +6,12 @@
     include 'TemplateHTML/Navbar/home.php'; ?>
     
 
-    <?php include './QuesTemplate/functions.php';
-
-    
-
+    <?php include './QuesTemplate/functions.php'; 
+     echo "<img src='sort.jpg' alt='' style='max-width: 100%;
+     height: auto; '>";
+    echo "<div style='background-color:#182628; position:absolute; left:500px; top:300px; border-radius: 20px;
+    padding: 20px 20px;'>";
+   
     echo "<center><h1>Hello {$_SESSION['UName']}</h1><br>";
 
     if($_SERVER['REQUEST_METHOD'] == 'POST'){
@@ -59,23 +61,24 @@
     if (mysqli_query($conn, $user)) {
          //for products table 
         if (mysqli_query($conn, $product)) {
-            echo "<div class='container' style='padding:20px;'>
-            <br><h3 style='background-color:green; color:white; width:500px; border-radius: 10px;'>Your response has been collected</h3><br>
-            <b>Pls view the status on your dashboard</b><br>
-            <b>Address given: $add </b><br>
+            echo "<div class='container' style='padding:10px;'>
+            <br><h3 style=' color:#378B50; width:500px; border-radius: 10px;'>Your response has been collected</h3><br>
+            <b style='color:white; text-transform:uppercase'>Pls view the status on your <p style='color:green'>dashboard<p></b><br>
+            <b style='color:white;'>Address given: $add </b><br>
 
             <a href='UserDashboard/user.php' class='btn btn-primary'>User Dashboard</a>
-            <a href='SellItem?itemName=fridge'>Back</a></center>
+            <a href='SellItem?itemName=fridge'>BACK</a></center>
             </div>";
         }
         else{
             echo"Record not inserted in products:(";
         }
-
+        echo"</div>";
     }
     else{
-        echo"Record not inserted un users:(";
+        echo"Record not inserted of users:(";
     }
+
 
    
 

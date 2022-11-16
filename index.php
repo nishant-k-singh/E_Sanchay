@@ -47,10 +47,9 @@
         <i class="bi bi-phone d-flex align-items-center ms-4"><span>+1 5589 55488 55</span></i>
       </div> -->
       <div class="social-links d-none d-md-flex">
-        <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
+        <a href="https://twitter.com/regain_e" class="twitter"><i class="bi bi-twitter"></i></a>
+        <a href="https://www.facebook.com/profile.php?id=100084952402576" class="facebook"><i class="bi bi-facebook"></i></a>
+        <a href="https://instagram.com/e_sanchay?igshid=YmMyMTA2M2Y=" class="instagram"><i class="bi bi-instagram"></i></a>
       </div>
     </div>
   </section><!-- End Top Bar -->
@@ -130,8 +129,8 @@
             <span style="font-size: 30px; color: #014d44;"> TRADE-IN YOUR USED ELECTRONICS for CASH </span></h2>
           <p><i>- An innovative way to reuse, recyle, reduce</i></p>
           <div class="d-flex justify-content-center justify-content-lg-start">
-            <a href="#services" class="btn-get-started">SELL</a>
-            <a href="assets/img/video.mp4" class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>Watch Video</span></a>
+            <a href="#portfolio" class="btn-get-started">SELL</a>
+            <a href="video2.mp4" class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>Watch Video</span></a>
           </div>
         </div>
         <div class="col-lg-6 order-1 order-lg-2">
@@ -291,7 +290,7 @@
             </div>
             <!-- End Portfolio Item -->
 
-            <div class="col-xl-4 col-md-6 portfolio-item filter-product">
+            <div class="col-xl-4 col-md-6 portfolio-item filter-app">
               <div class="portfolio-wrap">
                 <a href="SellItem.php?itemName=aircon"><img src="assets/img/ac.jpg" class="img-fluid" alt=""></a>
                 <div class="portfolio-info">
@@ -311,7 +310,7 @@
             </div>
             <!-- End Portfolio Item -->
 
-            <div class="col-xl-4 col-md-6 portfolio-item filter-app">
+            <div class="col-xl-4 col-md-6 portfolio-item filter-product">
               <div class="portfolio-wrap">
                 <a href="SellItem.php?itemName=laptop"><img src="assets/img/laptop.jpg" class="img-fluid" alt=""></a>
                 <div class="portfolio-info">
@@ -320,7 +319,7 @@
               </div>
             </div>
             <!-- End Portfolio Item -->
-            <div class="col-xl-4 col-md-6 portfolio-item filter-app">
+            <div class="col-xl-4 col-md-6 portfolio-item filter-product">
               <div class="portfolio-wrap">
                 <a href="SellItem.php?itemName=television"><img src="assets/img/tv.jpg" class="img-fluid" alt=""></a>
                 <div class="portfolio-info">
@@ -340,7 +339,7 @@
             </div>
             <!-- End Portfolio Item -->
 
-            <div class="col-xl-4 col-md-6 portfolio-item filter-app">
+            <div class="col-xl-4 col-md-6 portfolio-item filter-product">
               <div class="portfolio-wrap">
                 <a href="SellItem.php?itemName=desktop"><img src="assets/img/desktop.jpg" class="img-fluid" alt=""></a>
                 <div class="portfolio-info">
@@ -370,7 +369,7 @@
             </div>
             <!-- End Portfolio Item -->
 
-            <div class="col-xl-4 col-md-6 portfolio-item filter-app">
+            <div class="col-xl-4 col-md-6 portfolio-item filter-branding">
               <div class="portfolio-wrap">
                 <a href="SellItem.php?itemName=radio"><img src="assets/img/radio.jpg" class="img-fluid" alt=""></a>
                 <div class="portfolio-info">
@@ -669,13 +668,7 @@
                 </div>
               </div><!-- End Info Item -->
 
-              <div class="info-item d-flex">
-                <i class="bi bi-clock flex-shrink-0"></i>
-                <div>
-                  <h4>Open Hours:</h4>
-                  <p>Mon-Sun: 10AM - 23PM</p>
-                </div>
-              </div><!-- End Info Item -->
+              
             </div>
 
           </div>
@@ -697,8 +690,8 @@
                 <textarea class="form-control" name="uMessage" rows="7" placeholder="Message" required></textarea>
               </div>
               <div class="my-3">
-                <div class="loading">Loading</div> 
-                <div class="error-message"></div>
+                <div class="loading">
+                <div class="success-message"></div></div> 
                 <div class="sent-message">Your message has been sent. Thank you!</div>
               </div>
               <div class="text-center"><button type="submit">Send Message</button></div>
@@ -723,9 +716,9 @@
           </a>
           <p>An waste management website which collects old and non-functional electronic equipments and in exchanage of that cash is provided to the seller, then we sell those products collected to our vendors who recycle the waste </p>
           <div class="social-links d-flex mt-4">
-            <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-            <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-            <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+            <a href="https://twitter.com/regain_e" class="twitter"><i class="bi bi-twitter"></i></a>
+        <a href="https://www.facebook.com/profile.php?id=100084952402576" class="facebook"><i class="bi bi-facebook"></i></a>
+        <a href="https://instagram.com/e_sanchay?igshid=YmMyMTA2M2Y=" class="instagram"><i class="bi bi-instagram"></i></a>
             <!-- <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a> -->
           </div>
         </div>
@@ -736,19 +729,15 @@
             <li><a href="#">Home</a></li>
             <li><a href="#">About us</a></li>
             <li><a href="#">Services</a></li>
-            <li><a href="#">Terms of service</a></li>
-            <li><a href="#">Privacy policy</a></li>
+           
+
           </ul>
         </div>
 
         <div class="col-lg-2 col-6 footer-links">
           <h4>Our Services</h4>
           <ul>
-            <!-- <li><a href="#">Web Design</a></li>
-            <li><a href="#">Web Development</a></li>
-            <li><a href="#">Product Management</a></li>
-            <li><a href="#">Marketing</a></li>
-            <li><a href="#">Graphic Design</a></li> -->
+          <a href="#portfolio">SELL/DONATE</a>
           </ul>
         </div>
 
@@ -758,7 +747,7 @@
             845, Shivaji Nagar <br> Pune <br> Maharashtra 411004 <br><br>
             <strong>Phone:</strong> +91 20 6757 6200 <br>
             +91 83 3425 8923<br>
-            <strong>Email:</strong> info@example.com<br>
+            <strong>Email:</strong> esanchay@gmail.com<br>
           </p>
 
         </div>

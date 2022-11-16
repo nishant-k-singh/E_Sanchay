@@ -216,7 +216,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                                         </form>
                                                 
                                                 <?php } else {?>
-                                                         <a href="../LoginRegister/login.php" style="margin-left:10px;" class="btn btn-primary">Pls login to go ahead</a>
+                                                         <a href="login.php" style="margin-left:10px;" class="btn btn-primary">Pls login to go ahead</a>
                                                 <?php } 
                                                        // <!-- <img style="width: 300px; height: 300px;" src="./ProductImage/Fridge/<?php //echo $filename; " > -->
                                                 break;
@@ -264,7 +264,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                                                     </form>
                                                             
                                                             <?php } else {?>
-                                                                     <a href="../LoginRegister/login.php" style="margin-left:10px;" class="btn btn-primary">Pls login to go ahead</a>
+                                                                     <a href="login.php" style="margin-left:10px;" class="btn btn-primary">Pls login to go ahead</a>
                                                             <?php } 
                                                                    // <!-- <img style="width: 300px; height: 300px;" src="./ProductImage/Fridge/<?php //echo $filename; " > -->
                                                             break;
@@ -500,7 +500,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                                                         </form>
                                                                
                                                                 <?php } else {?>
-                                                                         <a href="../LoginRegister/login.php" style="margin-left:10px;" class="btn btn-primary">Pls login to go ahead</a>
+                                                                         <a href="login.php" style="margin-left:10px;" class="btn btn-primary">Pls login to go ahead</a>
                                                                 <?php } 
                                                                        // <!-- <img style="width: 300px; height: 300px;" src="./ProductImage/Fridge/<?php //echo $filename; " > -->
                                                                 break;  

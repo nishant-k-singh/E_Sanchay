@@ -99,7 +99,8 @@
     </div>
   </header><!-- End Header -->
 
-
+  <img src="../truck.jpg" alt="" style="width: 100%;
+  height: 1350px; ">
     <div class="loginForm">
         <section class="log">
             <h1 class="loginHeader">Register</h1><hr>
